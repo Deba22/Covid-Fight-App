@@ -94,8 +94,9 @@ namespace Covid19
 
                 String NOTIFICATION_CHANNEL_ID = "com.debweb.covidfight";
                 String channelName = "covidfight app service";
-                NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.ImportanceNone);
-               // chan.LightColor = GetColor(Color.ParseColor("#000"));
+                //NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.ImportanceNone);
+                NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName,NotificationImportance.None);
+                // chan.LightColor = GetColor(Color.ParseColor("#000"));
                 chan.LockscreenVisibility = NotificationVisibility.Private;
                 NotificationManager manager = (NotificationManager)GetSystemService(Context.NotificationService);
                 //Assert manager != null;
