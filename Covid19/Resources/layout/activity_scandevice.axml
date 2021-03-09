@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#fffdfc"
+	>
+	
+	<RelativeLayout
+            android:id="@+id/layoutTop"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		>
+		
+		<TextView
+                android:id="@+id/txtQuestion"
+			 android:fontFamily="@font/nunitosansfont"
+			 android:textStyle="bold"
+			android:textColor="#25235E"
+			android:layout_centerHorizontal="true"
+			android:text="What is social distancing?"
+			android:textSize="25dp"
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+
+		/>
+		<TextView
+            android:id="@+id/txtAnswer"
+			android:layout_below="@id/txtQuestion"
+			android:text="Social distancing, also called “physical distancing,” means keeping a safe space of at least 6 feet (about 2 arms’ length) between yourself and other people. "
+			android:textSize="20dp"
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+		/>
+		
+		<TextView
+            android:id="@+id/txtAboutApp"
+			android:layout_below="@id/txtAnswer"
+		android:layout_marginTop="15dp"
+			android:text="This app helps you to maintain social distance by alerting you when other people are too close so you can move, and maintain social distance from them."
+			android:textSize="20dp"
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+		/>
+			<Switch
+android:text="Start detection?"  
+			android:textSize="20dp"
+			 android:fontFamily="@font/nunitosansfont"
+			 android:textStyle="bold"
+			android:textColor="#25235E"
+			android:layout_below="@id/txtAboutApp"
+				android:layout_margin="10dp"
+android:layout_width="match_parent"  
+android:layout_height="wrap_content"  
+android:textOn="YES"  
+android:textOff="NO"  
+android:checked="false"
+android:id="@+id/scan_switch" />  
+
+	</RelativeLayout>
+	<RelativeLayout
+		android:id="@+id/layoutMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/layoutTop"
+		>
+		<com.airbnb.lottie.LottieAnimationView
+	android:id="@+id/animation_view"
+	android:layout_width="wrap_content"	
+	android:layout_height="wrap_content"
+				android:scaleType="centerCrop"
+	app:lottie_fileName="coronavirus-hologram.json"
+	app:lottie_loop="true"
+	app:lottie_autoPlay="true" 
+		android:visibility="gone"/>
+		
+
+		</RelativeLayout>
+	 <RelativeLayout
+        android:id="@+id/layouBottomMost"
+		android:layout_alignParentBottom="true"
+ android:gravity="center"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_marginBottom="15dp">
+		<TextView
+            android:id="@+id/txtStatus"
+			android:textColor="#1729D4"
+		   android:text=""
+			android:textSize="20dp"
+            android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+		/>
+		
+	</RelativeLayout>
+</RelativeLayout>
